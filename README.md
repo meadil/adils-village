@@ -88,8 +88,3 @@ src/
 ## Status
 
 Early. The structure and the feel are there; the content is what comes next.
-
----
-
-Built as an experiment: what if a personal site had a place instead of a
-headline?
