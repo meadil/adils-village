@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adil's Village
 
-## Getting Started
+**A village you can walk around on the web.**
 
-First, run the development server:
+Not a portfolio. Not a landing page. A small place with buildings, residents, a
+trophy shelf, and a war log — built because a personal site shouldn't have to be
+one long scroll of "here's what I did."
+
+---
+
+## What's in the village
+
+**The town hall.** The front door. Says what's here and where to go next.
+
+**Buildings.** Each area of the site is a building. You can see what's inside
+before you walk in.
+
+**The residents.** The people who live here — the projects, the tools, whatever
+belongs in the village.
+
+**The trophy shelf.** Things worth showing off.
+
+**The war log.** A record of what happened, when.
+
+**Contact.** A way to get in touch.
+
+---
+
+## The details
+
+It animates as you scroll — things fade and slide into place, there's a progress
+bar, and a sound effect when you click. Light and dark mode both work. It's
+fully responsive, so it's fine on a phone.
+
+---
+
+## Running it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For a production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## How it's built
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Next.js** — the React framework, so it renders fast and works well on slow
+connections
+**React + TypeScript**
+**Tailwind CSS** for styling
+**Framer Motion** for the animations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/
+│   ├── page.tsx        ← assembles the page
+│   └── globals.css     ← colours, fonts, shared styles
+├── components/
+│   ├── Hero.tsx        ← the town hall
+│   ├── Buildings.tsx
+│   ├── TroopRoster.tsx
+│   ├── TrophyShelf.tsx
+│   ├── WarLog.tsx
+│   ├── Contact.tsx
+│   ├── ScrollProgress.tsx
+│   └── ThemeToggle.tsx
+└── lib/
+    ├── fonts.ts
+    └── sound.ts
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Status
+
+Early. The structure and the feel are there; the content is what comes next.
+
+---
+
+Built as an experiment: what if a personal site had a place instead of a
+headline?
